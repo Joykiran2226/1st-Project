@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #c1e7f2, #dfe9f3, #b7d5ed);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 120px 20px 0; /* top padding for navbar */
+    }
+
+    .feedback-border-wrapper {
+      position: relative;
+      border-radius: 20px;
+      padding: 3px;
+      background: linear-gradient(45deg, #ff005e, #00d4ff, #00ff94, #ffea00, #ff005e);
+      background-size: 400% 400%;
+      animation: borderMove 6s linear infinite;
+      margin-bottom: 40px;
+    }
+
+    @keyframes borderMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .feedback-container {
+      background: #fff;
+      border-radius: 18px;
+      padding: 40px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.95);
+      font-size: 14px;
+      transition: border 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #00b4db;
+      outline: none;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .radio-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 400;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(to right, #00b4db, #0083b0);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #0083b0, #00b4db);
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .top-logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #000000cc;
+      font-weight: 600;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: rgb(4, 130, 25);
+    }
+
+    footer {
+      background-color: #fde3f0;
+      font-family: 'Poppins', sans-serif;
+      width: 100%;
+    }
+
+    .ft {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 30px 20px 0;
+    }
+
+    .box1 {
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    .box1 h3 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: black;
+    }
+
+    .box1 ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .box1 p, .box1 li {
+      color: #000;
+      line-height: 1.6;
+    }
+
+    .box1 a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .extra-footer {
+      padding: 20px;
+      background-color: #fde3f0;
+      text-align: center;
+    }
+
+    .extra-footer h2 {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .extra-footer p {
+      font-size: 14px;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .copyright {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      border-top: 1px solid #ccc;
+      margin-top: 10px;
+    }
+
+    .copyright img {
+      height: 24px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .ft {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .box1 ul {
+        padding-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="top-bar">
+    <div class="logo-container">
+      <img src="Plogo1.jpg" alt="Talent Classes Logo" class="top-logo" />
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <!-- Feedback Form -->
+  <div class="feedback-border-wrapper">
+    <div class="feedback-container">
+      <h2>Feedback Form</h2>
+      <form>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+
+        <label>How satisfied are you with our service?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="satisfaction" /> Very Satisfied</label>
+          <label><input type="radio" name="satisfaction" /> Satisfied</label>
+          <label><input type="radio" name="satisfaction" /> Neutral</label>
+          <label><input type="radio" name="satisfaction" /> Unsatisfied</label>
+          <label><input type="radio" name="satisfaction" /> Very Unsatisfied</label>
+        </div>
+
+        <label for="feedback">Your Feedback:</label>
+        <textarea id="feedback" placeholder="Share your thoughts..."></textarea>
+
+        <label for="suggestion">Any suggestions?</label>
+        <textarea id="suggestion" placeholder="We'd love to hear how we can improve..."></textarea>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="ft">
+      <div class="box1">
+        <h3>Address</h3>
+        <p><strong>Registered Offices:</strong></p>
+        <ul>
+          <li>AltF, Orchid Business Park, Near Subhash Chowk, Sector 48, Gurugram, Haryana, 122004</li>
+          <li>Kasturba Gandhi Marg, Connaught Place, New Delhi</li>
+          <li>Birla Tower: Plot No. 25, Barakhamba Road, Connaught Place, New Delhi</li>
+          <li>Reliance Corporate Park, Thane-Belapur Road, Ghansoli, Navi Mumbai-400701, Maharashtra</li>
+          <li>Electronics City, Hosur Road, Bangalore-560100, Karnataka</li>
+          <li>Survey No. 203/1, Manikonda Village, Gachibowli, Hyderabad-500032, Telangana</li>
+        </ul>
+      </div>
+      <div class="box1">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:joykiran0322@gmail.com"> joykiran0322@gmail.com </a></p>
+        <p>Phone: +91 6290522687</p>
+      </div>
+      <div class="box1">
+        <h3>Founder's Message</h3>
+        <p>
+          At Talent Classes, we envision a world where learning never stops — where each student finds their path, their confidence, and their future.
+          Our mission is to make quality education accessible 24×7 for every learner, from every corner.
+        </p>
+        <p><strong>— Joykiran Chakraborty<br>Founder, Talent Classes</strong></p>
+      </div>
+    </div>
+    <div class="extra-footer">
+      <h2>Why Choose Talent Classes?</h2>
+      <p>We believe in personalized learning that adapts to your pace, powered by expert mentors, practical resources, and real-world projects.
+        From foundational skills to career-ready knowledge, Talent Classes is your learning partner every step of the way — available 24×7, wherever you are.</p>
+    </div>
+    <div class="copyright">
+      <img src="Plogo1.jpg" alt="Talent Classes Logo">
+      &copy; 2025 <strong>Talent Classes</strong>. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
