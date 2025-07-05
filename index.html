@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talent Classes</title>
+  <!-- <link rel="stylesheet" href="PHome.css"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+  <style>
+    footer {
+      background-color: #fde3f0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .ft {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 30px 20px 0;
+    }
+
+    .box1 {
+      font-size: 14px;
+      padding: 10px;
+      border: none !important;
+    }
+
+    .box1 h3 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: black;
+    }
+
+    .box1 ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .box1 p, .box1 li {
+      color: #000;
+      line-height: 1.6;
+    }
+
+    .box1 a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .extra-footer {
+      padding: 20px;
+      background-color: #fde3f0;
+      text-align: center;
+    }
+
+    .extra-footer h2 {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .extra-footer p {
+      font-size: 14px;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .copyright {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      border-top: 1px solid #ccc;
+      margin-top: 10px;
+    }
+
+    .copyright img {
+      height: 24px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    .btn2 a 
+    {
+      color: white;
+      text-decoration: none;
+    }
+    .btn2 a:hover 
+    {
+      color: yellow;
+    }
+    *{
+    padding: 0;
+    margin: 0;
+}
+header
+{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+}
+header img{
+    width: 100px;
+    height: 100px;
+    margin-left: 500px;
+}
+.text1
+{
+    font-family: 'Poppins', sans-serif !important;
+    /*font-weight: bolder;*/
+    margin-left: 15px;
+    font-size: 50px;
+    color:rgb(53, 9, 95);
+}
+.navbar 
+{
+    background-color: powderblue;
+    padding: 10px 30px;
+    display: flex;
+}
+.navbar a 
+{
+    color: #000;
+    text-decoration: solid;
+    margin: 0 20px;
+    font-size: 20px;
+    transition: color 0.3s ease-in;
+}
+.navbar a:hover 
+{
+    color: rgb(38, 76, 228);
+}
+.btn1
+{
+    height: 38px;
+    width: 200px;
+    background-color: rgb(43, 139, 212);
+    font-weight: 700;
+    font-size: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn1 a:hover
+{
+    color: white;
+}
+.cards
+{
+    display: grid; 
+    grid-template-columns: auto auto;
+    margin-left:30px;
+    margin-right: 30px;
+    grid-column-gap: 1rem;
+    /* grid-row-gap: 1rem; */
+}
+.text3
+{
+    font-size: 45px;
+}
+.text4
+{
+    color:rgb(156, 34, 187);
+    font-family:'Arial Black', Gadget, sans-serif;
+}
+.pic1
+{
+    height:100px;
+    width:100px;
+}
+.box
+{
+    padding: 1rem;
+    border: 0px solid #000;
+}
+.text5
+{
+    color:rgb(99, 89, 101);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display:contents;
+}
+.pic2
+{
+    height: 580px;
+    width: 650px;
+    border-radius: 140px;
+}
+.btn2
+{
+    height: 80px;
+    width: 300px;
+    border-radius: 20px;
+    border: 0px;
+    margin-top: 20px;
+    background-color: rgb(147, 8, 157);
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    font-family: 'Arial Black', Gadget, sans-serif;
+}
+.ft
+{
+    background-color: rgb(244, 216, 230);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px 20px;
+    grid-column-gap: 1rem;
+}
+.box1
+{
+    border:1px solid black;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="Plogo1.jpg" class="logo1" alt="">
+    <div class="text1"> TALENT CLASSES </div>
+  </header>
+
+  <div class="navbar">
+    <b>
+      <a href="index.html">Home</a>
+      <a href="PExplore.html">Explore</a>
+      <a href="Pfeedback.html">Feedback</a>
+      <a href="PPrivacy_pol.html">Privacy Policy</a>
+      <a href="PTermsC.html">Terms & Conditions</a>
+    </b>
+    <button type="button" class="btn1">
+      <a href="Plg_sg.html" class="btna">Log In/Sign Up</a>
+    </button>
+  </div>
+
+  <div class="cards">
+    <div class="box">
+      <div class="text3">
+        <div class="text4">Level Up <img src="Parrow.jpg" class="pic1"></div>
+        <div class="text5">
+          Your career with expert mentorship & internships for FREE
+          <p style="color: grey; font-size: 20px; font-family: Arial Rounded MT;">
+            With 100% Internship guarantee on course completion.
+          </p>
+        </div>
+      </div>
+      <button class="btn2"><a href="PExplore.html"> Explore Courses </a></button>
+    </div>
+    <div class="box">
+      <img src="Pban1.jpg" class="pic2">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="ft">
+      <!-- Address -->
+      <div class="box1">
+        <h3>Address</h3>
+        <p><strong>Registered Offices:</strong></p>
+        <ul>
+          <li>AltF, Orchid Business Park, Near Subhash Chowk, Sector 48, Gurugram, Haryana, 122004</li>
+          <li>Kasturba Gandhi Marg, Connaught Place, New Delhi</li>
+          <li>Birla Tower: Plot No. 25, Barakhamba Road, Connaught Place, New Delhi</li>
+          <li>Reliance Corporate Park, Thane-Belapur Road, Ghansoli, Navi Mumbai-400701, Maharashtra</li>
+          <li>Electronics City, Hosur Road, Bangalore-560100, Karnataka</li>
+          <li>Survey No. 203/1, Manikonda Village, Gachibowli, Hyderabad-500032, Telangana</li>
+        </ul>
+      </div>
+
+      <!-- Contact Us -->
+      <div class="box1">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:sjoykiran0322@gmail.com"> joykiran0322@gmail.com </a></p>
+        <p>Phone: +91 6290522687 </p>
+      </div>
+
+      <!-- Founder's Message -->
+      <div class="box1">
+        <h3>Founder's Message</h3>
+        <p>
+          At Talent Classes, we envision a world where learning never stops — where each student finds their path, their confidence, and their future.
+          Our mission is to make quality education accessible 24×7 for every learner, from every corner.
+        </p>
+        <p><strong>— Joykiran Chakraborty<br>Founder, Talent Classes</strong></p>
+      </div>
+    </div>
+
+    <!-- Why Choose Section -->
+    <div class="extra-footer">
+      <h2>Why Choose Talent Classes?</h2>
+      <p>We believe in personalized learning that adapts to your pace, powered by expert mentors, practical resources, and real-world projects.
+        From foundational skills to career-ready knowledge, Talent Classes is your learning partner every step of the way — available 24×7, wherever you are.</p>
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+      <img src="Plogo1.jpg" alt="Talent Classes Logo">
+      &copy; 2025 <strong>Talent Classes</strong>. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
